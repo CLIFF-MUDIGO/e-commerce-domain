@@ -1,9 +1,8 @@
 class CreateProduct < ActiveRecord::Migration[6.1]
   def change
-    create_table :product do |t|
-      t.string :user
-      t.string :user_id
-      # the id column is gemerated automatically for every table! no need to specify it here.
+    create_table :products do |t|
+      t.string :name
+      t.timestamps
     end
   end
 end

@@ -1,10 +1,10 @@
 class CreateReview < ActiveRecord::Migration[6.1]
   def change
-    create_table :review do |t|
-      t.string :name
-      t.string :comment
+    create_table :reviews do |t|
       t.integer :star_rating
-      # the id column is gemerated automatically for every table! no need to specify it here.
+      t.string :comment
+      t.integer :user_id
+      t.integer :product_id
     end
   end
 end
